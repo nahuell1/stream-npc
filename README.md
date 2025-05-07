@@ -33,7 +33,7 @@ Choose one of the following installation methods:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/stream_npc.git
+git clone https://github.com/nahuell1/stream_npc.git
 cd stream_npc
 ```
 
