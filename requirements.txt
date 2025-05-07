@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai
+python-dotenv
+openai-whisper
+python-multipart
+ollama
+streamlink
+ffmpeg-python
+faster-whisper
+aiofiles
