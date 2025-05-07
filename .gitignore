@@ -8,13 +8,57 @@ venv/
 ENV/
 env/
 .env
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+*.sublime-workspace
+*.sublime-project
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+log/
+
+# Docker
+.docker/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Audio samples
+audio_samples/
+*.wav
+*.mp3
+*.ogg
+*.flac 

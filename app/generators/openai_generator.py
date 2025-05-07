@@ -3,16 +3,29 @@ from .base import BaseGenerator
 import os
 
 class OpenAIGenerator(BaseGenerator):
+    """Question generator using OpenAI's language models.
+    
+    This generator uses OpenAI's API to generate questions based on stream context,
+    simulating a curious viewer's perspective.
+    """
     def __init__(self):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     def generate_question(self, context: str) -> str:
+        """Generate a question based on the stream context.
+        
+        Args:
+            context: The recent stream context to generate a question from.
+            
+        Returns:
+            A generated question as a string.
+        """
         prompt = f"""
-Actuá como un compañero curioso. A partir de este texto reciente del streamer, hacé una pregunta interesante, graciosa o profunda:
+Act as a curious companion. Based on this recent text from the streamer, ask an interesting, funny, or deep question:
 
 \"{context.strip()}\"
 
-Pregunta:
+Question:
 """
         response = self.client.chat.completions.create(
             model="gpt-4",
